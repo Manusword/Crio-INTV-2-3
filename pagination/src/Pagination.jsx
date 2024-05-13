@@ -22,6 +22,7 @@ function Pagination() {
             setUser(data);
         } catch (error) {
             console.error('Error fetching data:', error.message);
+            alert('Failed to fetch data. Please try again.'); 
         }
     }
 
