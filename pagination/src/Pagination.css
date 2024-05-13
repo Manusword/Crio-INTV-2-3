@@ -1,0 +1,38 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+table{
+    width: 100%;
+    border-bottom: 2px solid rgb(20, 145, 110); 
+}
+table thead{
+    background-color: rgb(20, 145, 110);
+    color:white;
+}
+table tr{
+    height:30px;
+    
+}
+
+table td{
+    
+}
+
+button{
+    color:white;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(20, 145, 110);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
