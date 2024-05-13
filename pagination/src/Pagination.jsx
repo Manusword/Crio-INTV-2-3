@@ -17,10 +17,10 @@ function Pagination() {
             fetch(API_URL)
             .then(res=>res.json())
             .then(data=>setUser(data))
-            .catch(err=>console.error('error',"failed to fetch data"))
+            .catch(err=>console.error('error',err.message))
         }
         catch(err){
-            console.log(err)
+            console.log(err.message)
         }
     }
 
