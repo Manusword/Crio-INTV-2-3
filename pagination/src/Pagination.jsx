@@ -12,15 +12,16 @@ function Pagination() {
 
     
 
-    const getApiData = (min,max)=>{
-        try{
-            fetch(API_URL)
-            .then(res=>res.json())
-            .then(data=>setUser(data))
-            .catch(err=>console.error('error',err.message))
-        }
-        catch(err){
-            console.log(err.message)
+    const getApiData = async(min,max)=>{
+        try {
+            const response = await fetch(API_URL);
+            if (!response.ok) {
+                throw new Error('Failed to fetch data');
+            }
+            const data = await response.json();
+            setUser(data);
+        } catch (error) {
+            console.error('Error fetching data:', error.message);
         }
     }
 
