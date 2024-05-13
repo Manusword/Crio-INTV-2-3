@@ -13,10 +13,15 @@ function Pagination() {
     
 
     const getApiData = (min,max)=>{
-        fetch(API_URL)
-        .then(res=>res.json())
-        .then(data=>setUser(data))
-        .catch(err=>console.error("failed to fetch data"))
+        try{
+            fetch(API_URL)
+            .then(res=>res.json())
+            .then(data=>setUser(data))
+            .catch(err=>console.error('error',"failed to fetch data"))
+        }
+        catch(err){
+            console.log(err)
+        }
     }
 
     const filterData = (min,max)=>{
